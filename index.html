@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fichajes Pool Concept</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<style>
+  body{margin:0;min-height:100vh;display:grid;place-items:center;background:#F1F4F5;color:#24272D;
+    font-family:Montserrat,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;text-align:center}
+  img{width:96px;height:96px;border-radius:22px}
+  img.logo{width:auto;height:40px;border-radius:0}
+  h1{font-size:22px;margin:16px 0 4px}
+  p{margin:0 0 22px;color:#6B7079}
+  a{display:inline-block;background:#03A1BE;color:#fff;text-decoration:none;font-weight:600;padding:13px 26px;border-radius:12px}
+  @media (prefers-color-scheme:dark){body{background:#14171B;color:#E7EAEC}p{color:#9BA1A9}}
+</style>
+</head>
+<body>
+<div>
+  <img src="icon-192.png" alt="">
+  <h1>Fichajes</h1>
+  <p><img class="logo" src="logo.png" alt="Pool Concept"></p>
+  <a id="abrir" href="#">Abrir Fichajes</a>
+</div>
+<script>
+  // ⬇️ PEGA AQUÍ LA URL DE TU APLICACIÓN WEB DE APPS SCRIPT (la que termina en /exec), entre las comillas
+  var URL_APP = 'PEGA_AQUI_TU_URL/exec';
+
+  document.getElementById('abrir').href = URL_APP;
+  if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');
+  if (URL_APP.indexOf('PEGA_AQUI') < 0) location.replace(URL_APP);
+</script>
+</body>
+</html>
